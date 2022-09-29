@@ -52,7 +52,7 @@ logging.config.dictConfig({
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': 'mysite.log',
             'maxBytes':  1024 * 1,  # 1KB
-            'backupCount': 10,
+            'backupCount': 2,
             'formatter': 'standard',
         },
         'console': {

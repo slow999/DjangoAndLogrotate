@@ -7,6 +7,8 @@ WORKDIR /code
 COPY requirements.txt requirements.txt
 RUN apk add python3-dev build-base linux-headers pcre-dev
 RUN pip install uwsgi
+RUN mkdir -p /var/log/uwsgi
+RUN mkdir -p /var/log/nginx
 RUN pip install -r requirements.txt
 
 # web content
